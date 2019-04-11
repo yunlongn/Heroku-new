@@ -6,6 +6,8 @@ const upload = multer({ dest: "uploads/" });
 const app = express();
 
 app.use(cors());
+
+app.options('/upload');
 /* 
   upload.single('avatar') 接受以avatar命名的文件，也就是input中的name属性的值
   avatar这个文件的信息可以冲req.file中获取
